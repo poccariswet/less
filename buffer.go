@@ -54,15 +54,7 @@ func (buf *Buffer) read(f *os.File) error {
 	scanner := bufio.NewScanner(f)
 	var str []string
 	for scanner.Scan() {
-		text := ""
-		for _, v := range []byte(scanner.Text()) {
-			if v == byte('\t') {
-				text += "  "
-				continue
-			}
-			text += string(v)
-		}
-		str = append(str, text)
+		str = append(str, scanner.Text())
 	}
 	if err := scanner.Err(); err != nil {
 		return errors.New(fmt.Sprintf("scanner err:", err))
