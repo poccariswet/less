@@ -4,12 +4,7 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	"math"
 	"os"
-)
-
-const (
-	BUFSIZE = math.MaxInt32
 )
 
 type Buffer struct {
