@@ -9,6 +9,12 @@ this repo for acl's study
 $ go get github.com/rthornton128/goncurses
 ```
 
+## Each file
+
+- buffer.go: ファイル操作
+- view.go: レンダリング処理、スクロール系の処理
+- main.go: initの処理、rawmodeでの1文字待ち
+
 ## Usage
 
 ```sh
