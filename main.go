@@ -61,12 +61,9 @@ func run(args []string) int {
 		}
 	}()
 
-loop:
-	for {
-		select {
-		case <-quit:
-			break loop
-		}
+	for q := range quit {
+		_ = q
+		break
 	}
 
 	return 0
